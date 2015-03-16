@@ -112,3 +112,15 @@ hr {
     color:#fff !important;
     z-index:2;
 }
+
+/*Table*/
+.trim {
+    width: 75%;
+}
+
+td a {
+    color:black;
+}
+td:hover {
+    color: blue;
+}
