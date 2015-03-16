@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lustria|Martel+Sans:400,700);
+html {
+    width: 100%;
+}
 .content p {
     font-family: 'Lustria', serif;
     font-size: x-large;
@@ -113,6 +116,13 @@ hr {
     z-index:2;
 }
 
+.list-group a {
+    text-align: center;
+    font-size: 125%;
+    font-family: Lustria;
+}
+
+
 /*Table*/
 .trim {
     width: 75%;
@@ -124,3 +134,4 @@ td a {
 td:hover {
     color: blue;
 }
+
