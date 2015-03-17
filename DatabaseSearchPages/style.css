@@ -135,3 +135,7 @@ td:hover {
     color: blue;
 }
 
+/*Firefox Responsive Table Fix*/
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
