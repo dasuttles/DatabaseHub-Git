@@ -1,7 +1,7 @@
 <?php
 	$dbhost = 'impa.valdosta.edu';
-	$dbuser = 'archives';
-	$dbpassword = 'tqBXsZwR2QnL2qFY';
+	$dbuser = 'archives_web';
+	$dbpassword = 'uhCs4fQpr';
 	$dbname = 'extra_credit';
 
 	mysql_connect($dbhost, $dbuser, $dbpassword) or die ('Error connecting to mysql');
