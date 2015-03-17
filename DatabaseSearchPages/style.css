@@ -79,6 +79,11 @@ html {
     top: .9em;
     margin-bottom: 3em;
 }
+.top-arrow {
+    position: relative;
+    top: -1.5em;
+    right: 0;
+}
 .footer-edit {
     height: 5em;
     vertical-align: middle;
