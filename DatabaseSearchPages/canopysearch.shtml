@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Campus Canopy and Spectator Index</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A database and digitized collection of the Georgia State Womens College Campus Canopy and the Valdosta State College Spectator at Valdosta State University, from 1934-1970.">
+        <meta name="author" content="Valdosta State University Archives, Dallas Suttles, The Spectator,">
+        <meta name="keywords" content="Valdosta State University, Archives and Special Collections, Campus Canopy Index, Valdosta State History, Georgia, Database, Georgia State Womens College, Womens History, Spectator, Newspaper Archive, College Newspapers, Student Newspapers, Digitized Newspapers, Valdosta,">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+        <!--Database-->
+        <?php include('includes/ec_connect.php'); ?>
+    </head>
+    <body id="bg">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container" id="top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="myDropdown"> <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a target="_blank"  class="navbar-brand" href="#">VSU Archives Database Hub</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse in">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="http://www.valdosta.edu/archives">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.valdosta.edu/academics/library/general/forms/archives-contact-form.php">Contact</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="myDropdown">Databases <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Campus Canopy Index</a>
+                            </li>
+                            <li>
+                                <a href="#">Scrapbook Index Database</a>
+                            </li>
+                            <li>
+                                <a href="http://archives.valdosta.edu/research/VideoCollectionIndexSearchPage.shtml">VSU Video Database</a>
+                            </li>
+                            <li>
+                                <a href="http://archives.valdosta.edu/gendex/">Gendex</a>
+                            </li>
+                            <li>
+                                <a href="http://archives.valdosta.edu/gendex/">VDT Vital Records</a>
+                            </li>
+                            <li>
+                                <a href="http://archives.valdosta.edu/research/civilrightssearch.shtml">Civil Rights Newspaper Database</a>
+                            </li>
+                            <li>
+                                <a href="https://apex.valdosta.edu/apex/f?p=333:1:1771417285688431">China State Department Database</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://archives.valdosta.edu/archon/">Archon</a>
+                    </li>
+                    <li>
+                        <a href="https://vtext.valdosta.edu/xmlui/">Vtext</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-xs-12 head spacer-bottom">
+                <a href="http://www.valdosta.edu"><img src="img/vsuHead.jpg" class="pull-left spacer space-right img-rounded alignV img-responsive"></a>
+                <h1 class="bevel alignV martel">The Campus Canopy Index<small class="space-left"> Valdosta State Archives</small></h1>
+            </div>
+            <!-- FORM -->
+            <div class="col-md-4 pull-right col-xs-12 spacer-bottom spacer-top" id="moveSearch">
+                <form class="form-inline" action="canopysearch_results.php" method="GET" target="_blank">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Search Scrapbook Index</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </div>
+                        <input type="text" name="searchterm" class="form-control" id="#" placeholder="Enter search term...">
+                    </div>
+                </div>
+                <button type="submit" name="submit" value="Search" class="btn btn-danger alignV">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row-fluid spacer2">
+        <div class="content">
+            <h2 class="spacer-bottom bevel align">The Campus Canopy Newspaper<small class="space-left">A Student Publication</small></h2>
+            <!-- CAPTION -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h4>Campus Canopy Staff Room</h4>
+                            <p>Georgia State Womens College Newspaper Staff, 1937</p>
+                            <p><a target="_blank"  href="https://flic.kr/p/ej8U7B" class="label label-danger" rel="tooltip" title="Go to Flickr" target="_blank">View Photo</a>
+                        </div>
+                        <img src="img/cc-staff_1937.jpg" alt="Girls at Georgia State Womens College hard at work on the Campus Canopy paper in the staff room, 1937.">
+                    </div>
+                </div>
+                <!-- //Caption -->
+                <p class=”lead”>The <i>Campus Canopy</i>  was the student newspaper which began in 1934 at the Georgia State Womens College and continued at Valdosta State College in 1950. In 1970, the paper was renamed <a href="http://www.vsuspectator.com/" target="_new"><i>The Spectator</i></a>, as it is known today. The index is continuously being worked on by student volunteers. Presently, the index has been updated to the early 1970s. New entries are added regularly. </p>
+                <p class=”lead”>The <i>Campus Canopy</i> and a growing portion of <i>The Spectator</i> have now been digitized in full by our student workers. Anything you find in the index can be looked up directly <a href="#decade">below</a>. The student newspaper at Valdosta State is an excellent resource for Valdosta State University history.</p>
+                <p>Please <a target="_blank"  href="mailto:archives@valdostaedu">contact us</a> if you have any questions.</p>
+            </div>
+        </div>
+        <!-- DIGITAL COLLECTION -->
+        <center>
+        <div class="row-fluid trim">
+            <h2 class="text-center bevel martel" id="decade">Browse the Campus Canopy and The Spectator Online <small><span class=" glyphicon glyphicon-download"></span> PDF Format</small></h2>
+            <!--Decade panels-->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title text-center">
+                        <a target="_blank"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1930s <span class="glyphicon glyphicon-chevron-down pull-right b" aria-hidden="true"></span>
+                        </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="list-group">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-bordered table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1934-11-14.pdf">Campus Canopy, 1934-11-14</a>
+                                        </td>
+                                        <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1934-11-21.pdf">Campus Canopy, 1934-11-21</a>
+                                    </td>
+                                    <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1934-11-28.pdf">Campus Canopy, 1934-11-28</a>
+                                </td>
+                                <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1934-12-12.pdf">Campus Canopy, 1934-12-12</a>
+                            </td>
+                            <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1934-12-19.pdf">Campus Canopy, 1934-12-19</a>
+                        </td>
+                        <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-01-16.pdf">Campus Canopy, 1935-01-16</a>
+                    </td>
+                    <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-01-23.pdf">Campus Canopy, 1935-01-23</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-01-30.pdf">Campus Canopy, 1935-01-30</a>
+            </td>
+            <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-02-06.pdf">Campus Canopy, 1935-02-06</a>
+        </td>
+        <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-02-13.pdf">Campus Canopy, 1935-02-13</a>
+    </td>
+    <td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-02-20.pdf">Campus Canopy, 1935-02-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-02-27.pdf">Campus Canopy, 1935-02-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-03-06.pdf">Campus Canopy, 1935-03-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-03-15.pdf">Campus Canopy, 1935-03-15</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-04-03.pdf">Campus Canopy, 1935-04-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-04-10.pdf">Campus Canopy, 1935-04-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-04-17.pdf">Campus Canopy, 1935-04-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-05-01.pdf">Campus Canopy, 1935-05-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-05-29.pdf">Campus Canopy, 1935-05-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-09-27.pdf">Campus Canopy, 1935-09-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-10-04.pdf">Campus Canopy, 1935-10-04</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-10-11.pdf">Campus Canopy, 1935-10-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-10-18.pdf">Campus Canopy, 1935-10-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-10-25.pdf">Campus Canopy, 1935-10-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-11-01.pdf">Campus Canopy, 1935-11-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-11-08.pdf">Campus Canopy, 1935-11-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-11-15.pdf">Campus Canopy, 1935-11-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-11-22.pdf">Campus Canopy, 1935-11-22</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-12-06.pdf">Campus Canopy, 1935-12-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1935-12-13.pdf">Campus Canopy, 1935-12-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-01-17.pdf">Campus Canopy, 1936-01-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-01-24.pdf">Campus Canopy, 1936-01-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-02-07.pdf">Campus Canopy, 1936-02-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-02-28.pdf">Campus Canopy, 1936-02-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-03-10.pdf">Campus Canopy, 1936-03-10</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-04-04.pdf">Campus Canopy, 1936-04-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-04-18.pdf">Campus Canopy, 1936-04-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-05-02.pdf">Campus Canopy, 1936-05-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-06-01.pdf">Campus Canopy, 1936-06-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-08-06.pdf">Campus Canopy, 1936-08-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-09-30.pdf">Campus Canopy, 1936-09-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-10-09.pdf">Campus Canopy, 1936-10-09</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-10-16.pdf">Campus Canopy, 1936-10-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-10-23.pdf">Campus Canopy, 1936-10-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-10-30.pdf">Campus Canopy, 1936-10-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-11-06.pdf">Campus Canopy, 1936-11-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-11-13.pdf">Campus Canopy, 1936-11-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-11-20.pdf">Campus Canopy, 1936-11-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-12-04.pdf">Campus Canopy, 1936-12-04</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1936-12-11.pdf">Campus Canopy, 1936-12-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-01-15.pdf">Campus Canopy, 1937-01-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-01-22.pdf">Campus Canopy, 1937-01-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-01-29.pdf">Campus Canopy, 1937-01-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-02-05.pdf">Campus Canopy, 1937-02-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-02-12.pdf">Campus Canopy, 1937-02-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-02-19.pdf">Campus Canopy, 1937-02-19</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-02-26.pdf">Campus Canopy, 1937-02-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-03-12.pdf">Campus Canopy, 1937-03-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-04-09.pdf">Campus Canopy, 1937-04-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-04-16.pdf">Campus Canopy, 1937-04-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-04-24.pdf">Campus Canopy, 1937-04-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-04-30.pdf">Campus Canopy, 1937-04-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-05-14.pdf">Campus Canopy, 1937-05-14</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-05-29.pdf">Campus Canopy, 1937-05-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-09-25.pdf">Campus Canopy, 1937-09-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-10-02.pdf">Campus Canopy, 1937-10-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-10-09.pdf">Campus Canopy, 1937-10-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-10-23.pdf">Campus Canopy, 1937-10-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-10-30.pdf">Campus Canopy, 1937-10-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-11-06.pdf">Campus Canopy, 1937-11-06</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-11-13.pdf">Campus Canopy, 1937-11-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-11-20.pdf">Campus Canopy, 1937-11-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-12-04.pdf">Campus Canopy, 1937-12-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1937-12-11.pdf">Campus Canopy, 1937-12-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-01-22.pdf">Campus Canopy, 1938-01-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-02-05.pdf">Campus Canopy, 1938-02-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-02-12.pdf">Campus Canopy, 1938-02-12</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-02-19.pdf">Campus Canopy, 1938-02-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-03-05.pdf">Campus Canopy, 1938-03-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-04-02.pdf">Campus Canopy, 1938-04-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-04-09.pdf">Campus Canopy, 1938-04-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-04-16.pdf">Campus Canopy, 1938-04-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-04-23.pdf">Campus Canopy, 1938-04-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-05-07.pdf">Campus Canopy, 1938-05-07</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-05-14.pdf">Campus Canopy, 1938-05-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1938-05-21.pdf">Campus Canopy, 1938-05-21</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- //1930s -->
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingTwo">
+<h4 class="panel-title text-center">
+<a target="_blank"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+1940s <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+</a>
+</h4>
+</div>
+<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+<div class="list-group">
+<div class="table-responsive">
+<table class="table table-condensed table-bordered table-striped">
+<tbody>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-09-21.pdf">Campus Canopy, 1942-09-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-10-02.pdf">Campus Canopy, 1942-10-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-10-09.pdf">Campus Canopy, 1942-10-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-10-16.pdf">Campus Canopy, 1942-10-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-10-30.pdf">Campus Canopy, 1942-10-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-11-06.pdf">Campus Canopy, 1942-11-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-11-13.pdf">Campus Canopy, 1942-11-13</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1942-12-04.pdf">Campus Canopy, 1942-12-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-01-08.pdf">Campus Canopy, 1943-01-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-01-15.pdf">Campus Canopy, 1943-01-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-01-22.pdf">Campus Canopy, 1943-01-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-01-29.pdf">Campus Canopy, 1943-01-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-02-12.pdf">Campus Canopy, 1943-02-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-02-19.pdf">Campus Canopy, 1943-02-19</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-02-26.pdf">Campus Canopy, 1943-02-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-03-10.pdf">Campus Canopy, 1943-03-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-03-26.pdf">Campus Canopy, 1943-03-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-04-02.pdf">Campus Canopy, 1943-04-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-04-12.pdf">Campus Canopy, 1943-04-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-04-23.pdf">Campus Canopy, 1943-04-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-04-30.pdf">Campus Canopy, 1943-04-30</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-05-07.pdf">Campus Canopy, 1943-05-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-05-21.pdf">Campus Canopy, 1943-05-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-05-26.pdf">Campus Canopy, 1943-05-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-10-02.pdf">Campus Canopy, 1943-10-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-10-08.pdf">Campus Canopy, 1943-10-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-10-22.pdf">Campus Canopy, 1943-10-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-10-29.pdf">Campus Canopy, 1943-10-29</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-11-05.pdf">Campus Canopy, 1943-11-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-12-03.pdf">Campus Canopy, 1943-12-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1943-12-11.pdf">Campus Canopy, 1943-12-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-01-14.pdf">Campus Canopy, 1944-01-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-01-21.pdf">Campus Canopy, 1944-01-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-02-04.pdf">Campus Canopy, 1944-02-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-02-11.pdf">Campus Canopy, 1944-02-11</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-02-25.pdf">Campus Canopy, 1944-02-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-03-10.pdf">Campus Canopy, 1944-03-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-03-28.pdf">Campus Canopy, 1944-03-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-04-11.pdf">Campus Canopy, 1944-04-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-04-25.pdf">Campus Canopy, 1944-04-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-05-02.pdf">Campus Canopy, 1944-05-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-05-09.pdf">Campus Canopy, 1944-05-09</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-05-16.pdf">Campus Canopy, 1944-05-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-10-04.pdf">Campus Canopy, 1944-10-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-10-18.pdf">Campus Canopy, 1944-10-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-10-31.pdf">Campus Canopy, 1944-10-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-11-07.pdf">Campus Canopy, 1944-11-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-11-14.pdf">Campus Canopy, 1944-11-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-11-21.pdf">Campus Canopy, 1944-11-21</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1944-12-07.pdf">Campus Canopy, 1944-12-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-01-13.pdf">Campus Canopy, 1945-01-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-01-20.pdf">Campus Canopy, 1945-01-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-02-03.pdf">Campus Canopy, 1945-02-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-02-17.pdf">Campus Canopy, 1945-02-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-02-24.pdf">Campus Canopy, 1945-02-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-03-31.pdf">Campus Canopy, 1945-03-31</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-04-15.pdf">Campus Canopy, 1945-04-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-04-28.pdf">Campus Canopy, 1945-04-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-05-05.pdf">Campus Canopy, 1945-05-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-05-19.pdf">Campus Canopy, 1945-05-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-10-13.pdf">Campus Canopy, 1945-10-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-10-20.pdf">Campus Canopy, 1945-10-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-11-03.pdf">Campus Canopy, 1945-11-03</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-11-10.pdf">Campus Canopy, 1945-11-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-12-01.pdf">Campus Canopy, 1945-12-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1945-12-08.pdf">Campus Canopy, 1945-12-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-01-12.pdf">Campus Canopy, 1946-01-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-01-19.pdf">Campus Canopy, 1946-01-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-02-02.pdf">Campus Canopy, 1946-02-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-02-16.pdf">Campus Canopy, 1946-02-16</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-03-02.pdf">Campus Canopy, 1946-03-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-03-09.pdf">Campus Canopy, 1946-03-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-04-06.pdf">Campus Canopy, 1946-04-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-05-04.pdf">Campus Canopy, 1946-05-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-05-11.pdf">Campus Canopy, 1946-05-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-05-18.pdf">Campus Canopy, 1946-05-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-05-28.pdf">Campus Canopy, 1946-05-28</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-10-05.pdf">Campus Canopy, 1946-10-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-10-19.pdf">Campus Canopy, 1946-10-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-11-02.pdf">Campus Canopy, 1946-11-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1946-11-15.pdf">Campus Canopy, 1946-11-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-01-11.pdf">Campus Canopy, 1947-01-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-01-25.pdf">Campus Canopy, 1947-01-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-02-07.pdf">Campus Canopy, 1947-02-07</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-02-22.pdf">Campus Canopy, 1947-02-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-03-08.pdf">Campus Canopy, 1947-03-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-03-29.pdf">Campus Canopy, 1947-03-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-04-12.pdf">Campus Canopy, 1947-04-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-04-26.pdf">Campus Canopy, 1947-04-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-05-10.pdf">Campus Canopy, 1947-05-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-05-24.pdf">Campus Canopy, 1947-05-24</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-10-18.pdf">Campus Canopy, 1947-10-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-11-01.pdf">Campus Canopy, 1947-11-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-11-15.pdf">Campus Canopy, 1947-11-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1947-12-06.pdf">Campus Canopy, 1947-12-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-01-17.pdf">Campus Canopy, 1948-01-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-01-31.pdf">Campus Canopy, 1948-01-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-02-14.pdf">Campus Canopy, 1948-02-14</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-02-28.pdf">Campus Canopy, 1948-02-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-03-13.pdf">Campus Canopy, 1948-03-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-04-03.pdf">Campus Canopy, 1948-04-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-04-17.pdf">Campus Canopy, 1948-04-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-05-01.pdf">Campus Canopy, 1948-05-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-05-15.pdf">Campus Canopy, 1948-05-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-10-02.pdf">Campus Canopy, 1948-10-02</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-10-16.pdf">Campus Canopy, 1948-10-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-10-30.pdf">Campus Canopy, 1948-10-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-11-13.pdf">Campus Canopy, 1948-11-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1948-12-11.pdf">Campus Canopy, 1948-12-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-01-15.pdf">Campus Canopy, 1949-01-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-01-29.pdf">Campus Canopy, 1949-01-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-02-12.pdf">Campus Canopy, 1949-02-12</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-02-26.pdf">Campus Canopy, 1949-02-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-04-02.pdf">Campus Canopy, 1949-04-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-04-16.pdf">Campus Canopy, 1949-04-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-04-30.pdf">Campus Canopy, 1949-04-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-05-14.pdf">Campus Canopy, 1949-05-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-06-04.pdf">Campus Canopy, 1949-06-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-10-15.pdf">Campus Canopy, 1949-10-15</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-10-29.pdf">Campus Canopy, 1949-10-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-11-12.pdf">Campus Canopy, 1949-11-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1949-12-10.pdf">Campus Canopy, 1949-12-10</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- //1940s -->
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingThree">
+<h4 class="panel-title text-center">
+<a target="_blank"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+1950s <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+</a>
+</h4>
+</div>
+<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+<div class="list-group">
+<div class="table-responsive">
+<table class="table table-condensed table-bordered table-striped">
+<tbody>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-01-21.pdf">Campus Canopy, 1950-01-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-02-04.pdf">Campus Canopy, 1950-02-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-02-18.pdf">Campus Canopy, 1950-02-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-03-04.pdf">Campus Canopy, 1950-03-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-04-15.pdf">Campus Canopy, 1950-04-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-10-07.pdf">Campus Canopy, 1950-10-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-10-28.pdf">Campus Canopy, 1950-10-28</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1950-11-11.pdf">Campus Canopy, 1950-11-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-01-24.pdf">Campus Canopy, 1951-01-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-02-13.pdf">Campus Canopy, 1951-02-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-03-07.pdf">Campus Canopy, 1951-03-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-04-07.pdf">Campus Canopy, 1951-04-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-04-18.pdf">Campus Canopy, 1951-04-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-05-01.pdf">Campus Canopy, 1951-05-01</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-05-15.pdf">Campus Canopy, 1951-05-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-05-30.pdf">Campus Canopy, 1951-05-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-10-22.pdf">Campus Canopy, 1951-10-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-11-06.pdf">Campus Canopy, 1951-11-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-11-19.pdf">Campus Canopy, 1951-11-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1951-12-11.pdf">Campus Canopy, 1951-12-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-01-22.pdf">Campus Canopy, 1952-01-22</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-02-04.pdf">Campus Canopy, 1952-02-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-02-19.pdf">Campus Canopy, 1952-02-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-03-04.pdf">Campus Canopy, 1952-03-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-04-07.pdf">Campus Canopy, 1952-04-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-04-22.pdf">Campus Canopy, 1952-04-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-05-06.pdf">Campus Canopy, 1952-05-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-05-21.pdf">Campus Canopy, 1952-05-21</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-06-03.pdf">Campus Canopy, 1952-06-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-10-13.pdf">Campus Canopy, 1952-10-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-11-10.pdf">Campus Canopy, 1952-11-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1952-12-15.pdf">Campus Canopy, 1952-12-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1953-02-09.pdf">Campus Canopy, 1953-02-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1953-03-02.pdf">Campus Canopy, 1953-03-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1953-10-20.pdf">Campus Canopy, 1953-10-20</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1953-11-23.pdf">Campus Canopy, 1953-11-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1953-12-16.pdf">Campus Canopy, 1953-12-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1954-01-20.pdf">Campus Canopy, 1954-01-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1954-02-18.pdf">Campus Canopy, 1954-02-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1954-03-25.pdf">Campus Canopy, 1954-03-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1954-11-12.pdf">Campus Canopy, 1954-11-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1954-12-14.pdf">Campus Canopy, 1954-12-14</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1955-02-09.pdf">Campus Canopy, 1955-02-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1955-03-14.pdf">Campus Canopy, 1955-03-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1955-04-17.pdf">Campus Canopy, 1955-04-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1956-05-04.pdf">Campus Canopy, 1956-05-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1956-10-05.pdf">Campus Canopy, 1956-10-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1956-10-22.pdf">Campus Canopy, 1956-10-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1956-11-16.pdf">Campus Canopy, 1956-11-16</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1956-12-14.pdf">Campus Canopy, 1956-12-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-01-31.pdf">Campus Canopy, 1957-01-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-03-13.pdf">Campus Canopy, 1957-03-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-10-18.pdf">Campus Canopy, 1957-10-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-10-29.pdf">Campus Canopy, 1957-10-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-11-14.pdf">Campus Canopy, 1957-11-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-11-26.pdf">Campus Canopy, 1957-11-26</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1957-12-12.pdf">Campus Canopy, 1957-12-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-01-17.pdf">Campus Canopy, 1958-01-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-01-31.pdf">Campus Canopy, 1958-01-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-02-14.pdf">Campus Canopy, 1958-02-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-02-28.pdf">Campus Canopy, 1958-02-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-03-14.pdf">Campus Canopy, 1958-03-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-04-04.pdf">Campus Canopy, 1958-04-04</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-04-25.pdf">Campus Canopy, 1958-04-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-05-16.pdf">Campus Canopy, 1958-05-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-05-30.pdf">Campus Canopy, 1958-05-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-10-17.pdf">Campus Canopy, 1958-10-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-10-31.pdf">Campus Canopy, 1958-10-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-11-14.pdf">Campus Canopy, 1958-11-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1958-12-12.pdf">Campus Canopy, 1958-12-12</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-01-29.pdf">Campus Canopy, 1959-01-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-02-13.pdf">Campus Canopy, 1959-02-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-02-26.pdf">Campus Canopy, 1959-02-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-03-13.pdf">Campus Canopy, 1959-03-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-04-13.pdf">Campus Canopy, 1959-04-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-04-27.pdf">Campus Canopy, 1959-04-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-05-13.pdf">Campus Canopy, 1959-05-13</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-05-27.pdf">Campus Canopy, 1959-05-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-06-03.pdf">Campus Canopy, 1959-06-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-10-09.pdf">Campus Canopy, 1959-10-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-10-22.pdf">Campus Canopy, 1959-10-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-11-05.pdf">Campus Canopy, 1959-11-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-11-18.pdf">Campus Canopy, 1959-11-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-12-03.pdf">Campus Canopy, 1959-12-03</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1959-12-15.pdf">Campus Canopy, 1959-12-15</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- //1950s -->
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingFour">
+<h4 class="panel-title text-center">
+<a target="_blank"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+1960s <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+</a>
+</h4>
+</div>
+<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+<div class="list-group">
+<div class="table-responsive">
+<table class="table table-condensed table-bordered table-striped">
+<tbody>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-01-21.pdf">Campus Canopy, 1960-01-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-01-28.pdf">Campus Canopy, 1960-01-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-02-11.pdf">Campus Canopy, 1960-02-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-02-25.pdf">Campus Canopy, 1960-02-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-03-16.pdf">Campus Canopy, 1960-03-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-04-12.pdf">Campus Canopy, 1960-04-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-04-19.pdf">Campus Canopy, 1960-04-19</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-05-04.pdf">Campus Canopy, 1960-05-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-05-26.pdf">Campus Canopy, 1960-05-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-10-06.pdf">Campus Canopy, 1960-10-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-10-20.pdf">Campus Canopy, 1960-10-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-11-04.pdf">Campus Canopy, 1960-11-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-11-23.pdf">Campus Canopy, 1960-11-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1960-12-14.pdf">Campus Canopy, 1960-12-14</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-01-17.pdf">Campus Canopy, 1961-01-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-02-01.pdf">Campus Canopy, 1961-02-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-02-10.pdf">Campus Canopy, 1961-02-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-03-03.pdf">Campus Canopy, 1961-03-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-03-13.pdf">Campus Canopy, 1961-03-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-04-11.pdf">Campus Canopy, 1961-04-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-04-28.pdf">Campus Canopy, 1961-04-28</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-05-24.pdf">Campus Canopy, 1961-05-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-05-31.pdf">Campus Canopy, 1961-05-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-10-02.pdf">Campus Canopy, 1961-10-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-10-23.pdf">Campus Canopy, 1961-10-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-11-08.pdf">Campus Canopy, 1961-11-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1961-12-01.pdf">Campus Canopy, 1961-12-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-01-31.pdf">Campus Canopy, 1962-01-31</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-02-14.pdf">Campus Canopy, 1962-02-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-02-23.pdf">Campus Canopy, 1962-02-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-05-02.pdf">Campus Canopy, 1962-05-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-05-18.pdf">Campus Canopy, 1962-05-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-05-29.pdf">Campus Canopy, 1962-05-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-10-05.pdf">Campus Canopy, 1962-10-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-10-19.pdf">Campus Canopy, 1962-10-19</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-11-02.pdf">Campus Canopy, 1962-11-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-11-16.pdf">Campus Canopy, 1962-11-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-11-30.pdf">Campus Canopy, 1962-11-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1962-12-13.pdf">Campus Canopy, 1962-12-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-01-18.pdf">Campus Canopy, 1963-01-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-02-01.pdf">Campus Canopy, 1963-02-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-02-15.pdf">Campus Canopy, 1963-02-15</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-03-01.pdf">Campus Canopy, 1963-03-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-03-13.pdf">Campus Canopy, 1963-03-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-03-29.pdf">Campus Canopy, 1963-03-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-04-12.pdf">Campus Canopy, 1963-04-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-04-26.pdf">Campus Canopy, 1963-04-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-05-10.pdf">Campus Canopy, 1963-05-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-05-24.pdf">Campus Canopy, 1963-05-24</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-10-11.pdf">Campus Canopy, 1963-10-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-10-25.pdf">Campus Canopy, 1963-10-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-11-08.pdf">Campus Canopy, 1963-11-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1963-11-26.pdf">Campus Canopy, 1963-11-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-01-17.pdf">Campus Canopy, 1964-01-17</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-01-31.pdf">Campus Canopy, 1964-01-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-02-21.pdf">Campus Canopy, 1964-02-21</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-03-06.pdf">Campus Canopy, 1964-03-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-04-10.pdf">Campus Canopy, 1964-04-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-10-02.pdf">Campus Canopy, 1964-10-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-10-16.pdf">Campus Canopy, 1964-10-16</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-10-30.pdf">Campus Canopy, 1964-10-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-11-13.pdf">Campus Canopy, 1964-11-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1964-12-11.pdf">Campus Canopy, 1964-12-11</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-01-15.pdf">Campus Canopy, 1965-01-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-01-29.pdf">Campus Canopy, 1965-01-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-02-12.pdf">Campus Canopy, 1965-02-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-02-26.pdf">Campus Canopy, 1965-02-26</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-03-12.pdf">Campus Canopy, 1965-03-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-04-02.pdf">Campus Canopy, 1965-04-02</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-05-21.pdf">Campus Canopy, 1965-05-21</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-10-08.pdf">Campus Canopy, 1965-10-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-10-22.pdf">Campus Canopy, 1965-10-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-11-05.pdf">Campus Canopy, 1965-11-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-11-19.pdf">Campus Canopy, 1965-11-19</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1965-12-03.pdf">Campus Canopy, 1965-12-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-01-14.pdf">Campus Canopy, 1966-01-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-01-28.pdf">Campus Canopy, 1966-01-28</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-02-11.pdf">Campus Canopy, 1966-02-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-02-25.pdf">Campus Canopy, 1966-02-25</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-03-11.pdf">Campus Canopy, 1966-03-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-04-01.pdf">Campus Canopy, 1966-04-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-04-12.pdf">Campus Canopy, 1966-04-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-04-27.pdf">Campus Canopy, 1966-04-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-05-20.pdf">Campus Canopy, 1966-05-20</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-05-27.pdf">Campus Canopy, 1966-05-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-09-30.pdf">Campus Canopy, 1966-09-30</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-10-14.pdf">Campus Canopy, 1966-10-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-10-28.pdf">Campus Canopy, 1966-10-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-11-11.pdf">Campus Canopy, 1966-11-11</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-11-22.pdf">Campus Canopy, 1966-11-22</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1966-12-09.pdf">Campus Canopy, 1966-12-09</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-01-27.pdf">Campus Canopy, 1967-01-27</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-02-10.pdf">Campus Canopy, 1967-02-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-02-24.pdf">Campus Canopy, 1967-02-24</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-03-10.pdf">Campus Canopy, 1967-03-10</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-03-31.pdf">Campus Canopy, 1967-03-31</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-04-14.pdf">Campus Canopy, 1967-04-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-05-05.pdf">Campus Canopy, 1967-05-05</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-05-23.pdf">Campus Canopy, 1967-05-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-10-09.pdf">Campus Canopy, 1967-10-09</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-10-23.pdf">Campus Canopy, 1967-10-23</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-11-07.pdf">Campus Canopy, 1967-11-07</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-11-20.pdf">Campus Canopy, 1967-11-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1967-12-12.pdf">Campus Canopy, 1967-12-12</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-01-22.pdf">Campus Canopy, 1968-01-22</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-02-05.pdf">Campus Canopy, 1968-02-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-02-20.pdf">Campus Canopy, 1968-02-20</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-04-01.pdf">Campus Canopy, 1968-04-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-04-18.pdf">Campus Canopy, 1968-04-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-05-05.pdf">Campus Canopy, 1968-05-05</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-05-06.pdf">Campus Canopy, 1968-05-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-05-28.pdf">Campus Canopy, 1968-05-28</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-10-18.pdf">Campus Canopy, 1968-10-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-11-18.pdf">Campus Canopy, 1968-11-18</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1968-12-03.pdf">Campus Canopy, 1968-12-03</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-01-14.pdf">Campus Canopy, 1969-01-14</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-01-21.pdf">Campus Canopy, 1969-01-21</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-01-28.pdf">Campus Canopy, 1969-01-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-02-11.pdf">Campus Canopy, 1969-02-11</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-02-28.pdf">Campus Canopy, 1969-02-28</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-04-01.pdf">Campus Canopy, 1969-04-01</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-04-04.pdf">Campus Canopy, 1969-04-04</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-04-15.pdf">Campus Canopy, 1969-04-15</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-04-29.pdf">Campus Canopy, 1969-04-29</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-05-08.pdf">Campus Canopy, 1969-05-08</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-05-20.pdf">Campus Canopy, 1969-05-20</a>
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1969-05-30.pdf">Campus Canopy, 1969-05-30</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!--//1960s-->
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingFive">
+<h4 class="panel-title text-center">
+<a target="_blank"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+1970s <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+</a>
+</h4>
+</div>
+<div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+<div class="list-group">
+<div class="table-responsive">
+<table class="table table-condensed table-bordered table-striped">
+<tbody>
+<tr>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1970-10-06.pdf">Campus Canopy, 1970-10-06</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1970-10-13.pdf">Campus Canopy, 1970-10-13</a>
+</td>
+<td><a target="_blank" href="http://archives.valdosta.edu/documents/campus-canopy/campus-canopy_1970-10-20.pdf">Campus Canopy, 1970-10-20</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- //1970s -->
+</div>
+</div>
+</div>
+</div>
+<!--//Decade Panels-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</center>
+
+<!-- KEYWORDS -->
+<div class="row spacer2">
+<div class="col-md-12 col-xs-12">
+<h2 class="bevel martel">Browse by Keywords <span class="glyphicon glyphicon-eye-open text-muted alignV" aria-hidden="true"></span> </h2>
+<div class="row-fluid keyword-content lust">
+<div class="list-group col-sm-3">
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Freshmen&submit=Search" target="_blank" class="list-group-item">Freshmen</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Sophomore&submit=Search" target="_blank" class="list-group-item shadow">Sophomores</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Junior&submit=Search" target="_blank" class="list-group-item shadow">Juniors</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Senior&submit=Search" target="_blank" class="list-group-item shadow">Seniors</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Faculty&submit=Search" target="_blank" class="list-group-item shadow">Faculty</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Staff&submit=Search" target="_blank" class="list-group-item shadow">Staff</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Dr.+Powell&submit=Search" target="_blank" class="list-group-item">President Powell</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Dr.+Pound&submit=Search" target="_blank" class="list-group-item">President Pound</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Dr.+Reade&submit=Search" target="_blank" class="list-group-item">President Reade</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Dr.+Thaxton&submit=Search" target="_blank" class="list-group-item">President Thaxton</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Dr.+Martin&submit=Search" target="_blank" class="list-group-item">President Martin</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Annie+Hopper&submit=Search" target="_blank" class="list-group-item">Annie P. Hopper</a>
+</div>
+<div class="list-group col-sm-3">
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Lecture+series&submit=Search" target="_blank" class="list-group-item shadow">Lecture Series</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Lecture+series&submit=Search" target="_blank" class="list-group-item shadow">Art Series</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Award&submit=Search" target="_blank" class="list-group-item shadow">Awards</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Event&submit=Search" target="_blank" class="list-group-item shadow">Events</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=visit&submit=Search" target="_blank" class="list-group-item shadow">Visits and Visitors</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Club&submit=Search" target="_blank" class="list-group-item shadow">Clubs</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=History&submit=Search#" target="_blank" class="list-group-item shadow">History</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Theatre&submit=Search" target="_blank" class="list-group-item shadow">Theater</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Festival&submit=Search" target="_blank" class="list-group-item shadow">Festivals</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Queen&submit=Search" target="_blank" class="list-group-item shadow">Pageant Queens</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Student+Government&submit=Search" target="_blank" class="list-group-item shadow">S.G.A.</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Glee&submit=Search" target="_blank" class="list-group-item shadow">Glee Club</a>
+</div>
+<div class="list-group col-sm-3">
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Glee&submit=Search" target="_blank" class="list-group-item shadow">Sock N' Buskin</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Emory&submit=Search" target="_blank" class="list-group-item shadow">Emory Jr.</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Sorority&submit=Search" target="_blank" class="list-group-item shadow">Sororities</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Fraternity&submit=Search" target="_blank" class="list-group-item shadow">Fraternities</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Sports&submit=Search" target="_blank" class="list-group-item shadow">Sports</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Basketball&submit=Search" target="_blank" class="list-group-item">Basketball</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Football&submit=Search" target="_blank" class="list-group-item shadow">Football</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Baseball&submit=Search" target="_blank" class="list-group-item shadow">Baseball</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Softball&submit=Search" target="_blank" class="list-group-item shadow">Softball</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Cheerleaders&submit=Search" target="_blank" class="list-group-item shadow">Cheerleaders</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Golf&submit=Search" target="_blank" class="list-group-item shadow">Golf</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Intramural&submit=Search" target="_blank" class="list-group-item shadow">Intramural Sports</a>
+</div>
+<div class="list-group col-sm-3">
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Election&submit=Search" target="_blank" class="list-group-item shadow">Elections</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=World+War&submit=Search" target="_blank" class="list-group-item">World War II</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Red+Cross&submit=Search" target="_blank" class="list-group-item shadow">Red Cross</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Integration&submit=Search" target="_blank" class="list-group-item shadow">Integration</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Vietnam&submit=Search" target="_blank" class="list-group-item shadow">Vietnam</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Rat+Week&submit=Search" target="_blank" class="list-group-item shadow">Rat Week & Greek Week</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Letter+to+the+editor&submit=Search" target="_blank" class="list-group-item shadow">Letters to the Editor</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Pound+Hall&submit=Search" target="_blank" class="list-group-item shadow">Pound Hall</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Converse+Hall&submit=Search" target="_blank" class="list-group-item shadow">Converse Hall</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=West+Hall&submit=Search" target="_blank" class="list-group-item shadow">West Hall</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Student+Union&submit=Search" target="_blank" class="list-group-item shadow">Student Union</a>
+<a target="_blank"  href="http://archives.valdosta.edu/research/canopysearch_results.php?searchterm=Valdosta&submit=Search" target="_blank" class="list-group-item shadow">Valdosta</a>
+</div>
+</div>
+</div>
+<!--//Keywords-->
+</div>
+<!--Footer-->
+<div class="row">
+<hr class="style7">
+<footer class="footer">
+<div class="container footer-edit">
+<p class="text-muted bevel"><a target="_blank"  href="http://www.valdosta.edu/" class="link">Valdosta State University </a> |<a target="_blank"  href="http://www.valdosta.edu/archives" class="link"> Archives and Special Collections</a>, 1998-2015 &copy;</p>
+<center class="pull-right top-arrow"><a href="#top"><span class="glyphicon glyphicon-arrow-up"></span> Top</a></center>
+</div>
+</footer>
+</div>
+<!--//Footer-->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- Google Fonts -->
+<script src="fonts.js"></script>
+<!--Page Scripts-->
+<script type="text/javascript">
+$('.collapse').collapse()
+$(document).ready(function() {
+$('.dropdown-toggle').dropdown();
+});
+$(document).ready(function() {
+$("[rel='tooltip']").tooltip();
+$('.thumbnail').hover(
+function() {
+$(this).find('.caption').slideDown(250); //.fadeIn(250)
+},
+function() {
+$(this).find('.caption').slideUp(250); //.fadeOut(205)
+}
+);
+});
+</script>
+</html>
