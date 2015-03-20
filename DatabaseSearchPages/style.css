@@ -144,3 +144,10 @@ td:hover {
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
+
+/*VideoSearchPage*/
+
+#youtube {
+    width: 60%;
+    height: auto;
+}

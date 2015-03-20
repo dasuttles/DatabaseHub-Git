@@ -10,25 +10,31 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" type="text/css" />
         <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="shortcut icon" href="../assets/ico/favicon.png">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+        <!--Database-->
+        <?php include('includes/ec_connect.php'); ?>
     </head>
     <body id="bg">
         <!-- Static navbar -->
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
+            <div class="container" id="top">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="myDropdown"> <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">VSU Archives Database Hub</a>
+                    <a target="_blank"  class="navbar-brand" href="#">VSU Archives Database Hub</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse in">
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="http://www.valdosta.edu/archives">Home</a>
@@ -37,7 +43,7 @@
                             <a href="#about">About</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a target="_blank" href="http://www.valdosta.edu/academics/library/general/forms/archives-contact-form.php">Contact</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="myDropdown">Databases <span class="caret"></span>
@@ -82,20 +88,21 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-xs-12 head spacer-bottom">
-                <img src="img/vsuHead.jpg" class="pull-left spacer space-right img-rounded alignV img-responsive">
+                <a href="http://www.valdosta.edu"><img src="img/vsuHead.jpg" class="pull-left spacer space-right img-rounded alignV img-responsive"></a>
                 <h1 class="bevel alignV martel">VSU Video Index<small class="space-left"> Valdosta State Archives</small></h1>
             </div>
-            <div class="col-md-4 col-md-push-3 col-xs-12 spacer-bottom spacer-top" id="moveSearch">
-                <form class="form-inline" action="submit">
+            <!-- FORM -->
+            <div class="col-md-4 pull-right col-xs-12 spacer-bottom spacer-top" id="moveSearch">
+                <form class="form-inline" action="videosearch_results.php" method="GET" target="_blank">
                     <div class="form-group">
                         <label class="sr-only" for="exampleInputAmount">Search Video Index</label>
                         <div class="input-group">
                             <div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         </div>
-                        <input type="text" class="form-control" id="#" placeholder="Enter search term...">
+                        <input type="text" name="searchterm" class="form-control" id="#" placeholder="Enter search term...">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger alignV">Search</button>
+                <button type="submit" class="btn btn-danger alignV" value="Search">Search</button>
             </form>
         </div>
     </div>
@@ -117,69 +124,133 @@
                 </div>
                 <!-- //Caption -->
                 <p class="lead">The video collection indexing project lists titles, event names, names found in videos, subjects, and summaries of each video. This is a wonderful source for people researching Valdosta State University.  Our indexing project is ongoing.  We will add new records at the end of each semester.  These records were created by the volunteer VSU history student workers who were working in Archives for their history classes.  We are very grateful to these workers. Please contact us if you have any questions. Please <a href="mailto:archives@valdostaedu">contact us</a> if you have any questions.</p>
-                </div>
             </div>
-            <div class="row spacer2">
-                <div class="col-md-12 col-xs-12">
-                    <h2 class="bevel rale"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Browse by Keywords</h2>
-                    <div class="row-fluid keyword-content lust">
-                        <div class="list-group col-sm-4">
-                            <a href="#" class="list-group-item">Cras justo odio</a>
-                            <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item shadow">Morbi leo risus</a>
-                            <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
-                        </div>
-                        <div class="list-group col-sm-4">
-                            <a href="#" class="list-group-item">Cras justo odio</a>
-                            <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item shadow">Morbi leo risus</a>
-                            <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
-                        </div>
-                        <div class="list-group col-sm-4">
-                            <a href="#" class="list-group-item">Cras justo odio</a>
-                            <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item shadow">Morbi leo risus</a>
-                            <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
-                        </div>
+        </div>
+        <!-- //content -->
+
+        <!-- YouTube Section -->
+
+<div class="row">
+<div class="col-md-8 col-md-push-2">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <center>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <iframe src="https://www.youtube.com/embed/-4qvYR0kqqA" frameborder="0" allowfullscreen></iframe>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x600" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+ <div class="item">
+      <img src="http://placehold.it/1200x600" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+     <div class="item">
+      <img src="http://placehold.it/1200x600" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+     <div class="item">
+      <img src="http://placehold.it/1200x600" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+  </div>
+       </center>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</div> 
+        <!-- //youtube -->
+
+        <div class="row spacer2">
+            <div class="col-md-12 col-xs-12">
+                <h2 class="bevel lust"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Browse by Keywords</h2>
+                <div class="row-fluid keyword-content lust">
+                    <div class="list-group col-sm-4">
+                        <a href="#" class="list-group-item">Cras justo odio</a>
+                        <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item shadow">Morbi leo risus</a>
+                        <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
+                    </div>
+                    <div class="list-group col-sm-4">
+                        <a href="#" class="list-group-item">Cras justo odio</a>
+                        <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item shadow">Morbi leo risus</a>
+                        <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
+                    </div>
+                    <div class="list-group col-sm-4">
+                        <a href="#" class="list-group-item">Cras justo odio</a>
+                        <a href="#" class="list-group-item shadow">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item shadow">Morbi leo risus</a>
+                        <a href="#" class="list-group-item shadow">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item shadow">Vestibulum at eros</a>
                     </div>
                 </div>
-                <!--//Keywords-->
             </div>
-            </center>
-            <!--//Container-Fluid-->
-            <!--Footer-->
-            <div class="row">
-                <hr class="style7">
-                <footer class="footer">
-                    <div class="container footer-edit">
-                        <p class="text-muted bevel"><a href="http://www.valdosta.edu/archives" class="link">Valdosta State University Archives and Special Collections</a>, 1998-2015 &copy;</p>
-                    </div>
-                </footer>
-            </div>
-            <!--//Footer-->
-        </body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <!-- Google Fonts -->
-        <script src="fonts.js"></script>
-        <!--Page Scripts-->
-        <script type="text/javascript">
-        $(document).ready(function() {
-        $('.dropdown-toggle').dropdown();
-        });
-        $(document).ready(function() {
-        $("[rel='tooltip']").tooltip();
-        $('.thumbnail').hover(
-        function() {
-        $(this).find('.caption').slideDown(250); //.fadeIn(250)
-        },
-        function() {
-        $(this).find('.caption').slideUp(250); //.fadeOut(205)
-        }
-        );
-        });
-        </script>
-    </html>
+            <!--//Keywords-->
+        </div>
+        </center>
+        <!--//Container-Fluid-->
+        <!--Footer-->
+        <div class="row">
+            <hr class="style7">
+            <footer class="footer">
+                <div class="container footer-edit">
+                    <p class="text-muted bevel"><a href="http://www.valdosta.edu/archives" class="link">Valdosta State University Archives and Special Collections</a>, 1998-2015 &copy;</p>
+                </div>
+            </footer>
+        </div>
+        <!--//Footer-->
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Google Fonts -->
+    <script src="fonts.js"></script>
+    <!--Page Scripts-->
+    <script type="text/javascript">
+    $('.carousel').carousel();
+    $(document).ready(function() {
+    $('.dropdown-toggle').dropdown();
+    });
+    $(document).ready(function() {
+    $("[rel='tooltip']").tooltip();
+    $('.thumbnail').hover(
+    function() {
+    $(this).find('.caption').slideDown(250); //.fadeIn(250)
+    },
+    function() {
+    $(this).find('.caption').slideUp(250); //.fadeOut(205)
+    }
+    );
+    });
+    </script>
+</html>
