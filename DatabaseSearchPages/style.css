@@ -151,3 +151,8 @@ td:hover {
     width: 60%;
     height: auto;
 }
+
+.ytlogo {
+    max-width: 25px;
+    vertical-align: mi;
+}
