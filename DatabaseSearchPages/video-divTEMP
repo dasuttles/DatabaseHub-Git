@@ -1,0 +1,94 @@
+ <div class="panel-group spacer-top spacer-bottom" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title text-center martel">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        YouTube Videos
+                    </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                    <!-- Youtube Row 1 -->
+                        <div class="row-fluid">
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Youtube Row -->
+
+                         <div class="row-fluid spacer-top">
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-2 spacer-top">
+                                
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ScsqxKwAiKg"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Youtube Row -->
+                    </div>
+                </div>
+            </div>
