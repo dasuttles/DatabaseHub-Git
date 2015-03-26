@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/level2.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>VSC Herbarium Slide Index</title>
+<!-- InstanceEndEditable -->
+<link href="/css/level_2.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<!-- Script to operate department drop down menu -->
+<!--
+<script language="JavaScript" type="text/javascript" src="/site/js/menu.js"></script><noscript>Visit the <a href="/vsu/administration.shtml">Administration</a> page instead of using the pull-down menu below.</noscript>
+-->
+<!-- Script to operate search engine -->
+<script language="JavaScript" type="text/javascript" src="/site/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="/site/js/noframe.js"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4063051-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- Script to keep page from being placed into a frame -->
+
+<!-- InstanceBeginEditable name="head" --><style type="text/css">
+<!--
+.style1 {font-size: 16px}
+.style2 {font-size: 15px}
+body p {padding-left: 5px; padding-right: 5px;}
+-->
+</style><!-- InstanceEndEditable -->
+</head>
+
+<body>
+<?php include_once("includes/analyticstracking.php") ?>
+<div id="wrapper">
+<div id="header">
+	<!--#include virtual="/site/header_sub.html"-->
+	<!--#include virtual="/site/deptmenu.shtml"-->
+</div>
+<div id="rightwrapper">
+	<div id="blackmenu">
+	<!--#include virtual="/site/corepages.html"-->
+	</div>
+	
+	<div id="content">
+	<!-- InstanceBeginEditable name="Main Content Section" -->
+<div style="width: 100%">
+	<div style="margin-left: 10px; margin-right: 10px;">     
+      <p> <a href="http://www.valdosta.edu/academics/library/depts/archives-and-special-collections/welcome.php">Home</a> &gt;<a href="http://www.valdosta.edu/academics/library/depts/archives-and-special-collections/finding-aids/">Finding Aids</a> &gt; VSC Herbarium Slide Search Page</p>
+	  <h1 align="center"> <strong>Valdosta State College: Biology Dept. Herbarium Slides, 1950s - 1960s</strong></h1>
+	  <p align="left" class="style1">Botanical slides from the Valdosta State College Biology Department dating back to the 1950s. The slides were locked in a heavy duty slide safe and were in complete disarray.</p>
+	  <form action="herbarium_results.php" method="get">
+	  <h3>Search the VSC Herbarium Slide Index</h3> 
+
+<p class="style2">Search the VSC Herbarium Slide Index by Keyword</p> 
+<br />
+	  <input name="searchterm" type="text" />
+	  <input name="submit" type="submit" value="Search" />
+	  </form>
+	  <br />
+	  <p><br />
+&nbsp; </p>
+	  <h1><br />
+        <br />
+      </h1>
+      </div>
+      </div>
+	<!-- InstanceEndEditable -->    </div>
+  </div>
+	<div id="footer">
+		<!--#include virtual="/site/footer_sub.html"-->
+	</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

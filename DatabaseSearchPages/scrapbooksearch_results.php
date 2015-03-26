@@ -23,6 +23,7 @@
 	<?php include('includes/ec_connect.php'); ?>
 </head>
 <body id="bg">
+<?php include_once("includes/analyticstracking.php") ?>
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<h1 class="martel">Scrapbook Search Results</h1>

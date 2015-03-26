@@ -23,6 +23,7 @@
         <?php include('includes/ec_connect.php'); ?>
     </head>
     <body id="bg">
+    <?php include_once("includes/analyticstracking.php") ?>
              <!-- Static navbar -->
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container" id="top">

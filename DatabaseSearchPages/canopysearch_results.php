@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://raw.githubusercontent.com/dasuttles/GithubBak/master/DatabaseSearchPages/style.css" type="text/css" />
 </head>
 <body id="bg">
+<?php include_once("includes/analyticstracking.php") ?>
 <div class="container-fluid">
 <div class="row-fluid">
 <h1 class="martel">Campus Canopy Search Results</h1>
