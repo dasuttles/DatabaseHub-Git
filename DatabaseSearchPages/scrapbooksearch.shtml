@@ -7,7 +7,7 @@
         <meta name="author" content="Valdosta State University Archives, Dallas Suttles">
         <meta name="keywords" content="Valdosta State University, Archives and Special Collections, Scrapbook Index, Valdosta State History, Georgia, Database, Georgia State Womans College, Womens History">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" type="text/css" />
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -17,46 +17,46 @@
         <link rel="shortcut icon" href="../assets/ico/favicon.png">
     </head>
     <body id="bg">
-        <!-- Static navbar -->
+                <!-- Static navbar -->
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
+            <div class="container" id="top">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="myDropdown"> <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">VSU Archives Database Hub</a>
+                    <a target="_blank" class="navbar-brand" href="#">VSU Archives Database Hub</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse in">
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="http://www.valdosta.edu/archives">Home</a>
                         </li>
-                        <li>
-                            <a href="#about">About</a>
+                        <li class="active">
+                            <a href="about.html" id="active">About</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a target="_blank" href="http://www.valdosta.edu/academics/library/general/forms/archives-contact-form.php">Contact</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="myDropdown">Databases <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="#">Campus Canopy Index</a>
+                                <a href="http://archives.valdosta.edu/research/canopysearch.shtml">Campus Canopy Index</a>
                             </li>
                             <li>
-                                <a href="#">Scrapbook Index Database</a>
+                                <a href="http://archives.valdosta.edu/research/scrapbooksearch.shtml">Scrapbook Index Database</a>
                             </li>
                             <li>
                                 <a href="http://archives.valdosta.edu/research/VideoCollectionIndexSearchPage.shtml">VSU Video Database</a>
                             </li>
                             <li>
-                                <a href="http://archives.valdosta.edu/gendex/">Gendex</a>
+                                <a href="https://www.flickr.com/photos/valdosta_archives/">Digitized Photograph Collection</a>
                             </li>
                             <li>
-                                <a href="http://archives.valdosta.edu/gendex/">VDT Vital Records</a>
+                                <a href="http://archives.valdosta.edu/gendex/">Gendex & VDT Vital Records</a>
                             </li>
                             <li>
                                 <a href="http://archives.valdosta.edu/research/civilrightssearch.shtml">Civil Rights Newspaper Database</a>
@@ -112,7 +112,7 @@
                     <p><a href="" class="label label-danger" rel="tooltip" title="Zoom">Zoom</a>
                     <a href="" class="label label-primary" rel="tooltip" title="Download now">Download</a></p>
                 </div>
-                <img src="http://placehold.it/300x250" alt="...">
+                <img src="img/scrapbook-pic.jpg" alt="...">
             </div>
       </div>
       <!-- //Caption -->

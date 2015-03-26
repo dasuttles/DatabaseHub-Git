@@ -7,7 +7,7 @@
         <meta name="author" content="Valdosta State University Archives, Dallas Suttles">
         <meta name="keywords" content="Valdosta State University, Southern Patriot, Newspaper, Civil Rights, History, Georgia, Database, Index,Archives, United States History, African American History, SNCC,">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" type="text/css" />
         <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">

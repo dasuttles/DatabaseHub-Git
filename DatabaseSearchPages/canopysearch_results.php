@@ -9,7 +9,7 @@
         <meta name="author" content="Valdosta State University Archives, Dallas Suttles, The Spectator,">
         <meta name="keywords" content="Valdosta State University, Archives and Special Collections, Campus Canopy Index, Valdosta State History, Georgia, Database, Georgia State Womens College, Womens History, Spectator, Newspaper Archive, College Newspapers, Student Newspapers, Digitized Newspapers, Valdosta,">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://raw.githubusercontent.com/dasuttles/GithubBak/master/DatabaseSearchPages/style.css" type="text/css" />
 </head>
 <body id="bg">
@@ -19,14 +19,14 @@
 <p>
 <h3><a href="canopysearch.shtml">Return to the search page.</a></h3>
 <?php
-  $dbhost = 'codex.valdosta.edu';
-  $dbuser = 'archives';
-  $dbpassword = 'arch1';
-  $dbname = 'extra_credit';
+	$dbhost = 'codex.valdosta.edu';
+	$dbuser = 'archives';
+	$dbpassword = 'arch1';
+	$dbname = 'extra_credit';
 
-  mysql_connect($dbhost, $dbuser, $dbpassword) or die ('Error connecting to mysql');
-  mysql_select_db($dbname);
-  
+	mysql_connect($dbhost, $dbuser, $dbpassword) or die ('Error connecting to mysql');
+	mysql_select_db($dbname);
+	
 
 $searchterm=$_GET['searchterm']; 
 
@@ -55,23 +55,21 @@ echo "<tr>
 </tr>";
 while ($row = mysql_fetch_array($result)){
 
-  echo "<tr>";
-  echo "<td>".$counter."</td>";
-  echo "<td>$row[year]</td>";
-  echo "<td>$row[volume]</td>";
-  echo "<td>$row[title]</td>";
-  echo "<td>$row[author]</td>";   
-  echo "<td>$row[date]</td>";
-  echo "<td>$row[page_number]</td>";
-  echo "<td>$row[people_in_article]</td>";
-  echo "<td>$row[subjects_in_article]</td>";
-  echo "<td>$row[brief_summary]</td>";
-  echo "</tr>";
+	echo "<tr>";
+	echo "<td>".$counter."</td>";
+	echo "<td>$row[year]</td>";
+	echo "<td>$row[volume]</td>";
+	echo "<td>$row[title]</td>";
+	echo "<td>$row[author]</td>";		
+	echo "<td>$row[date]</td>";
+	echo "<td>$row[page_number]</td>";
+	echo "<td>$row[people_in_article]</td>";
+	echo "<td>$row[subjects_in_article]</td>";
+	echo "<td>$row[brief_summary]</td>";
+	echo "</tr>";
 
 $counter++;
 }
-
-
 
 ?>
 </div>

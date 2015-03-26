@@ -7,7 +7,7 @@
         <meta name="author" content="Valdosta State University Archives, Dallas Suttles, The Spectator,">
         <meta name="keywords" content="Valdosta State University, Archives and Special Collections, Campus Canopy Index, Valdosta State History, Georgia, Database, Georgia State Womens College, Womens History, Spectator, Newspaper Archive, College Newspapers, Student Newspapers, Digitized Newspapers, Valdosta,">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" type="text/css" />
         <!-- Fav and touch icons -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -40,7 +40,7 @@
                             <a href="http://www.valdosta.edu/archives">Home</a>
                         </li>
                         <li>
-                            <a href="#about">About</a>
+                            <a href="about.html">About</a>
                         </li>
                         <li>
                             <a target="_blank" href="http://www.valdosta.edu/academics/library/general/forms/archives-contact-form.php">Contact</a>
@@ -50,19 +50,19 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="#">Campus Canopy Index</a>
+                                 <a href="http://archives.valdosta.edu/research/canopysearch.shtml">Campus Canopy Index</a>
                             </li>
                             <li>
-                                <a href="#">Scrapbook Index Database</a>
+                                <a href="http://archives.valdosta.edu/research/scrapbooksearch.shtml">Scrapbook Index Database</a>
                             </li>
-                            <li>
+                             <li>
                                 <a href="http://archives.valdosta.edu/research/VideoCollectionIndexSearchPage.shtml">VSU Video Database</a>
                             </li>
                             <li>
-                                <a href="http://archives.valdosta.edu/gendex/">Gendex</a>
+                                <a href="https://www.flickr.com/photos/valdosta_archives/">Digitized Photograph Collection</a>
                             </li>
                             <li>
-                                <a href="http://archives.valdosta.edu/gendex/">VDT Vital Records</a>
+                                <a href="http://archives.valdosta.edu/gendex/">Gendex & VDT Vital Records</a>
                             </li>
                             <li>
                                 <a href="http://archives.valdosta.edu/research/civilrightssearch.shtml">Civil Rights Newspaper Database</a>
